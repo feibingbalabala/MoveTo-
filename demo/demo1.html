@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <!-- <script type="text/javascript" src="./jquery.min.js"></script> -->
+    <script type="text/javascript" src="../dist/moveTo.js"></script>
+    <style type="text/css">
+        html, body, div {
+            margin: 0;
+            padding: 0;
+        }
+        .section1 {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            background: #000;
+        }
+        .section2 {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            background: #cfc;
+        }
+        .section3 {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            background: #ccc;
+        }
+        .btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100px;
+            height: 30px;
+            margin: auto;
+            line-height: 30px;
+            background: #fff;
+            border-radius: 6px;
+            text-align: center;
+            color: #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+	<div class="section1" id="top">
+        <a class="btn" href="#middle">middle</a>   
+    </div>
+    <div class="section2" id="middle">
+        <a class="btn" href="#bottom">bottom</a>
+    </div>
+    <div class="section3" id="bottom">
+        <a class="btn" href="#top">top</a> 
+    </div>
+</body>
+<script type="text/javascript">
+    // var moveTo = new MoveTo();
+    // // var target = document.getElementById("down");
+    // // moveTo.move(target); //可以是对象，滚动距离为当前对象距离顶部的位置。
+    // // moveTo.move(300); // 可以是number，滚动位移位数字的大小，超出页面高度，则滚动到底部
+    // var trigger = document.getElementsByClassName('btn');
+    // for(var i = 0; i < trigger.length; i++) {
+    //     moveTo.registerTrigger(trigger[i]);//这个要和a标签一起用比较好，a标签中的href写id是一个锚点连接，点击的话他会直接到这个id所对应的盒模型，没有滚动的过渡效果，当然你也可以不在a标签href写值，那他就会滚动到第一个元素。
+    // };
+    // 只能获取body的位置，如果在外层包括那就不行了
+    // document.addEventListener('DOMContentLoaded', function(){
+    //   var easeFunctions = {
+    //     easeInQuad: function (t, b, c, d) {
+    //       t /= d;
+    //       // console.log("t:" + t, "b:" + b,"c:" + c,"d" + d, c * t * t + b)
+    //       return c * t * t + b;
+    //     },
+    //     easeOutQuad: function (t, b, c, d) {
+    //       t /= d;
+    //       // console.log("t:" + t, "b:" + b,"c:" + c,"d" + d, -c * t* (t - 2) + b)
+    //       console.log(-c * t* (t - 2) + b)
+    //       return -c * t* (t - 2) + b;
+    //     },
+    //     demo: function(t, b, c, d) {
+    //         t /= d;
+    //         // console.log("t:" + t, "b:" + b,"c:" + c,"d" + d, t)
+    //         return t;
+    //     }
+    //   }
+    //   var moveTo = new MoveTo({
+    //     //tolerance: -200, //容差可正数可以是负数，相当于增加或减少的位移量
+    //     duration: 1000,
+    //     easing: 'easeOutQuad'  //这个地方就很坑了，我下的官方demo写但是ease。疑惑了我好久，我开元代吗也是easing。这个不知道是不是官方的失误。
+    //   }, easeFunctions);
+    //   var triggers = document.getElementsByClassName('btn');
+    //   for (var i = 0; i < triggers.length; i++) {
+    //     moveTo.registerTrigger(triggers[i]);
+    //   }
+    // });
+</script>
+</html>
