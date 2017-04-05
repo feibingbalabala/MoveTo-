@@ -86,7 +86,7 @@ MoveTo()带有四个参数，<br />tolerance 允许的容差，也就是比如�
 ```javascript
     document.addEventListener('DOMContentLoaded', function () {
         var easeFunctions = {
-            //t为每次滚动的开始时间，b是滚动开始的位置，c为目标的位置也就是变化量，d为滚动的时间，然后return出对应的距离，把距离给window.scroll(0,这个值)进行滚动，看到window对象，就以为着他的父元素只能是body了~（我原本想用他做一个横向移动的东西~），而且scroll(x,y)这个函数只能支持有滚动条状态下的移动（我原本想做一个点击横向滚动ppt类型的动画~又失败了），这里要特别说明的是他的滚动不是我们以往用的计时器加offset或者是CSS3 transition或animation，他使用了requestAnimationFrame()这个鲜有人问津的函数。稍后，我们简单的说下这个函数。
+            //t为每次滚动的开始时间，b是滚动开始的位置，c为目标的位置也就是变化量，d为滚动的时间，然后return出对应的距离，把距离给window.scroll(0,这个值)进行滚动，看到window对象，就意为着他的父元素只能是body了~（我原本想用他做一个横向移动的东西~），而且scroll(x,y)这个函数只能支持有滚动条状态下的移动（我原本想做一个点击横向滚动ppt类型的动画~又失败了），这里要特别说明的是他的滚动不是我们以往用的计时器加offset或者是CSS3 transition或animation，他使用了requestAnimationFrame()这个鲜有人问津的函数。稍后，我们简单的说下这个函数。
             easeInQuad: function (t, b, c, d) {
                 t /= d;
                 return c * t * t + b;
