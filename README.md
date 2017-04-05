@@ -113,8 +113,10 @@ MoveTo()带有四个参数，<br />tolerance 允许的容差，也就是比如�
         moveTo.registerTrigger(trigger);
     });
 ```
-### 接下来我们来谈谈requestAnimationFrame：
+## 接下来我们来谈谈requestAnimationFrame：
+
 有挺多浏览器的显示屏率是16.7ms，也就比如一条公路最快速度16.7ms通过一辆车，在33.4ms才能通过第二辆车。但是有得人就喜欢挤上去非要23ms使用了setInterval进行夹塞，要想安全通过，只能让第一辆车消失，也就是丢帧，就给人一种动画卡顿的感觉。requestAnimationFrame就是跟着浏览器的绘制走，浏览器最快绘制速度是多少，那他就是多少，动画就不会掉帧，自然的流畅。
-![Alt text](./jianrong.png)
-###最后
+![Alt text](./img/jianrong.png)
+## 最后
+
 MoveTo虽然不能作出很牛逼的效果，而且兼容性有点尴尬，但是他的源码确实给我们提供了另外一种绘制动画的方式。如果只是做简单的页面滚动，不妨尝试使用这个~
